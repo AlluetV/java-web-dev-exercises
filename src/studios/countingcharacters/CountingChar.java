@@ -5,7 +5,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class CountingChar {
     public static void main(String [] arg) throws IOException {
@@ -43,14 +43,18 @@ public class CountingChar {
 
     //method to read a file , my phrase is stored in myPhrase.txt
     public static String readFromFile(String file) throws IOException {
-        String read = "";
+        //String read = "";
+        StringBuilder read = new StringBuilder();
+
         Path path = Paths.get(file);
         List<String> lines = Files.readAllLines(path);
 
         // concatenating all lines to get the whole phrase
         for(String line : lines){
-            read += line;
+            //read += line;
+            read.append(line);
+
         }
-        return read;
+        return read.toString();
     }
 }
