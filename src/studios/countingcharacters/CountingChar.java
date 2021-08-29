@@ -10,15 +10,18 @@ import java.util.Scanner;
 public class CountingChar {
     public static void main(String [] arg) throws IOException {
 
-        Scanner input = new Scanner(System.in);
-        System.out.println("phrase ...");
+        // Scanner input = new Scanner(System.in);
+        System.out.println("phrase read from my file");
+        // String myPhrase = input.nextLine();
         String  myPhrase = readFromFile("java-web-dev-exercises/studio2phrase/myPhrase.txt");
 
         //making  case-insensitive.
         String finalPhrase = myPhrase.toLowerCase();
-       // System.out.println("your phrase is:\n" + finalPhrase);
 
+        // changing  the phrase to chars
         char [] charPhrase = finalPhrase.toCharArray();
+
+        // creating an empty map
         HashMap<Character, Integer> mapPhrase = new HashMap<>();
 
         for(char i : charPhrase){
@@ -43,8 +46,10 @@ public class CountingChar {
         String read = "";
         Path path = Paths.get(file);
         List<String> lines = Files.readAllLines(path);
+
+        // concatenating all lines to get the whole phrase
         for(String line : lines){
-            read+=line;
+            read += line;
         }
         return read;
     }
