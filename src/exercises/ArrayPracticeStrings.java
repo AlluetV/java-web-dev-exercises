@@ -9,6 +9,7 @@ public class ArrayPracticeStrings {
         System.out.println("split by one space");
         System.out.println(Arrays.toString(words));
 
+/*
         String [] wordDots = phrase.split("\\.");
         System.out.println("split by // dots");
         System.out.println(Arrays.toString(wordDots));
@@ -20,6 +21,8 @@ public class ArrayPracticeStrings {
         String [] wordChar = phrase.split("//");
         System.out.println("split by char //");
         System.out.println(Arrays.toString(wordChar));
+
+ */
 
     }
 }
