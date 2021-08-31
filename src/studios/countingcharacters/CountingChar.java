@@ -5,12 +5,14 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 //import java.util.Scanner;
 
 public class CountingChar {
     public static void main(String [] arg) throws IOException {
 
         // Scanner input = new Scanner(System.in);
+
         System.out.println("phrase read from my file");
         // String myPhrase = input.nextLine();
         String  myPhrase = readFromFile("java-web-dev-exercises/studio2phrase/myPhrase.txt");
@@ -36,8 +38,10 @@ public class CountingChar {
             }
 
         }
-
-        System.out.println(mapPhrase);
+        for (Map.Entry<Character,Integer> word : mapPhrase.entrySet()) {
+            System.out.println(word.getKey() + ":" + word.getValue());
+        }
+        //System.out.println(mapPhrase);
 
     }
 
